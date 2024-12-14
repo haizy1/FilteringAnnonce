@@ -1,0 +1,82 @@
+<!-- src/main/resources/templates/search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Locations</title>
+</head>
+<body>
+<h1>Search for Locations</h1>
+<form action="/api/annonces/search" method="get">
+    <div>
+        <label for="typeBien">Type de Bien:</label>
+        <select name="typeBien" id="typeBien">
+            <option value="">Tous</option>
+            <option value="MAISON">Maison</option>
+            <option value="APPARTEMENT">Appartement</option>
+            <option value="STUDIO">Studio</option>
+            <option value="CHAMBRE">Chambre</option>
+        </select>
+    </div>
+    <div>
+        <label for="typeLogement">Type de Logement:</label>
+        <select name="typeLogement" id="typeLogement">
+            <option value="">Tous</option>
+            <option value="LOGEMENT_ENTIER">Logement entier</option>
+            <option value="EN_COLOCATION">En colocation</option>
+            <option value="CHEZ_LHABITANT">Chez l'habitant</option>
+        </select>
+    </div>
+    <div>
+        <label for="statusAnnonce">Status Annonce:</label>
+        <select name="statusAnnonce" id="statusAnnonce">
+            <option value="">Tous</option>
+            <option value="DISPONIBLE">Disponible</option>
+            <option value="NON_DISPONIBLE">Non disponible</option>
+        </select>
+    </div>
+    <div>
+        <label for="ville">Ville:</label>
+        <input type="text" name="ville" id="ville">
+    </div>
+    <div>
+        <label for="quartier">Quartier:</label>
+        <input type="text" name="quartier" id="quartier">
+    </div>
+    <div>
+        <label for="rue">Rue:</label>
+        <input type="text" name="rue" id="rue">
+    </div>
+    <div>
+        <label for="minPrix">Prix minimum:</label>
+        <input type="number" name="minPrix" id="minPrix" step="0.01">
+    </div>
+    <div>
+        <label for="maxPrix">Prix maximum:</label>
+        <input type="number" name="maxPrix" id="maxPrix" step="0.01">
+    </div>
+    <div>
+        <label for="meuble">Meublé:</label>
+        <select name="meuble" id="meuble">
+            <option value="">Tous</option>
+            <option value="true">Oui</option>
+            <option value="false">Non</option>
+        </select>
+    </div>
+    <div>
+        <label for="nombrePieces">Nombre de pièces:</label>
+        <input type="number" name="nombrePieces" id="nombrePieces">
+    </div>
+    <div>
+        <label for="nombreChambres">Nombre de chambres:</label>
+        <input type="number" name="nombreChambres" id="nombreChambres">
+    </div>
+    <div>
+        <label for="nombreSalleBain">Nombre de salles de bain:</label>
+        <input type="number" name="nombreSalleBain" id="nombreSalleBain">
+    </div>
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>
